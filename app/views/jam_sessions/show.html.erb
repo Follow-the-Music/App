@@ -19,6 +19,14 @@
     line-height: 26.4px;
     text-align:center;
   }
+  /*.button2 {
+    background-color:  #F8F9FF;
+    border-radius: 10%;
+    border-color:black;
+    font-size: 27px;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+
+  }*/
 </style>
 <div class="jam">
   <br>
@@ -59,8 +67,11 @@
   <strong>Description:</strong>
   <%= @jam_session.description %>
 </p>
-
-<br><hr>
+<br>
+<br>
+<%= link_to "Join", guest_session_association_path(id:session.id,player:TRUE), class:'btn btn-danger' %>
+<br><br>
+<hr>
 <p>
   <h1>Chat</h1>
   <%= render 'chat_messages/form', chat_message: ChatMessage.new, jam_session: @jam_session %>
@@ -69,17 +80,6 @@
     <%= render 'chat_messages/message', message: message %>
   <% end %>
 </p>
-
-<!-- TESTING ONLY
-<p>
-  <strong>Latitude:</strong>
-  <%= @jam_session.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @jam_session.longitude %>
-</p>-->
 
 <br><br>
 <%= link_to 'Edit', edit_jam_session_path(@jam_session) %> |

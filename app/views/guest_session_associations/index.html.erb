@@ -3,6 +3,8 @@
 .jumbotron{
   background-color: #F8F8FF;
   text-align: center;
+}
+.font{
   font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
 }
 body{
@@ -12,6 +14,7 @@ body{
 </style>
 <body>
   <div class="center jumbotron" >
+    <div class="font">
 <h1>My Sessions</h1>
 <br>
 <table>
@@ -50,8 +53,8 @@ body{
 
 <br>
 <br>
-
-<strong><%= link_to 'Join New Session', jam_path %><strong>
+</div>
+<strong><%= link_to 'Join New Session', jam_path, class:'btn btn-danger' %><strong>
   <br>
   <br>
 </div>
