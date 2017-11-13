@@ -15,6 +15,7 @@
   <tbody>
     <% @chat_messages.each do |chat_message| %>
       <tr>
+        
         <td><%= chat_message.content %></td>
         <td><%= chat_message.author_id %></td>
         <td><%= chat_message.jam_session_id %></td>

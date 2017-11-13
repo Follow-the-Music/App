@@ -25,6 +25,7 @@
 <h1><strong><%=@jam_session.name%></strong></h1>
 <br>
 <p>
+  <%= image_tag User.find(id=@jam_session.host_id).avatar.url(:thumb) %>
   <strong>Host:</strong>
   <%= @name[0]%>
 </p>
@@ -48,6 +49,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= image_tag user.avatar.url(:thumb) %></td>
         <td><%= user.name %></td>
         <td><%= link_to 'Show', user %></td>
       </tr>
