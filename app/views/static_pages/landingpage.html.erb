@@ -4,22 +4,12 @@
     background-image: url('<%= asset_path("guitars.jpg")%>');
     background-repeat: repeat;
     padding-top: 15%;
-
     padding-bottom: 15%;
-
   }
   .row2{
     background-color:white;
     padding-top: 15%;
-
     padding-bottom: 15%;
-
-  }
-  .container{
-    position: absolute;
-   width: 100%;
-   left: 0;
-   margin-top: 0%
   }
 .myButton {
   margin-left: 45%;
@@ -105,9 +95,11 @@
         z-index: 3;
     }
 </style>
+
+
 <% provide(:title, "Follow The Music") %>
 <body>
-<div class="container">
+<div class="container" style="background-color:white; width: 100%;margin-top:0;left: 0;position:absolute; ">
   <div class="row">
     <div class="row1">
     <h1 style="color:white; font-size:60px;">Follow The Music</h1>
@@ -121,7 +113,9 @@
                   <input type="text" class="  search-query form-control" placeholder="Find Spontaneous Jam Session" />
                   <span class="input-group-btn">
                       <button class="btn btn-danger" type="button">
-                          <span class=" glyphicon glyphicon-search"></span>
+                          <span class=" glyphicon glyphicon-search">
+
+                          </span>
                       </button>
                   </span>
               </div>
@@ -145,4 +139,4 @@
   </div>
 </div>
 
-</body>/
+</body>
